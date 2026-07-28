@@ -14,5 +14,9 @@ print("Is employee true or not: ",is_employee)
 print("CGPA of employee: ",CGPA)
 
 def display(name:str , age :int ,course: str):
-    print("Name of the student:", name,"with its age", age,"And course is: ",course)
+    print("Name of the student:", name,"with its age: ", age,"And course is: ",course)
 display("Noman",23,"Agentic ai")
+
+def add(a:int,b: int) -> int :
+    return a+b
+print(add(34,53))
