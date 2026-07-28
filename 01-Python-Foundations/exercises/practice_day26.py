@@ -1,0 +1,14 @@
+
+print("=========DAY 26====Type Hinting================")
+name : str = "Noman"
+roll_no: int = 124
+age : int = 22
+salary : float = 23500.00
+is_employee : bool = True
+CGPA: float = 3.54
+print("Name is: ",name)
+print("Roll no is: ", roll_no)
+print("Age of employee is: ",age)
+print("Employee salary : ",salary)
+print("Is employee true or not: ",is_employee)
+print("CGPA of employee: ",CGPA)
