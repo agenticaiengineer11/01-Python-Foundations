@@ -23,3 +23,6 @@ print(add(34,53))
 def calculate_Salary(basic_Salary: float , bonus : float):
     return basic_Salary + bonus
 print(calculate_Salary(45000,5000))
+
+Students: list[str] = ["Noman","Ahmad","Ali"]
+print(Students)
