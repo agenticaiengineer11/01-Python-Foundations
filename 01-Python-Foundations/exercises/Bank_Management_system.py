@@ -19,25 +19,36 @@ class Bank:
             print("Your balance after deposit is: ",self.__balance)
         else:
             print("Invalid amount")
-            logging.error("Wrong amount : {amount} must be positive {balance}")
-    def withdraw(self,amount):
-        print("Your current balance is: ",self.__balance)
-        if amount<= self.__balance:
-            self.__balance -=amount
-            print("Amount withdraw successfully")
-            logging.info("Amount : %2f withdrawn successfully. ")
-            print("Your balance after withdraw is: ",self.__balance)
+            logging.error("Wrong amount : %.2f ", amount,"It must be positive")
+    def withdraw(self, amount):
+        print(f"Your current balance is: {self.__balance:.2f}")
+
+        if amount <= self.__balance:
+            self.__balance -= amount
+            print("Amount withdrawn successfully.")
+            logging.info(
+                "Amount: %.2f withdrawn successfully.",
+                amount
+            )
+            logging.info(
+                "Current balance: %.2f",
+                self.__balance
+            )
         else:
-            print("Invalid inputs")
-            logging.error("Invalid amount: %.2f.available balance: %2f", amount,self.__balance)
+            print("Insufficient balance.")
+            logging.warning(
+                "Withdrawal failed. Requested: %.2f, Available: %.2f",
+                amount,
+                self.__balance
+            )
     def check_balance(self):
-        logging.info("Your balance is: %2f ",self.__balance)
+        logging.info("Your balance is: %.2f ",self.__balance)
         return self.__balance
     def display_info(self):
         print("Account Number:", self.__account_no)
         print("Holder Name:", self.__holder_name)
         print("Balance:", self.__balance)
-        logging.info("Acount Number is: '{account_no}' added")
+        logging.info("Acount Number is: %.2f added",self.__account_no)
 bank = Bank(123456, "John Doe", 1000)
 
 while True:
@@ -57,8 +68,8 @@ while True:
         amount = float(input("Enter withdrawal amount: "))
         bank.withdraw(amount)
     elif choice == 4:
-       bank.display_info()
-    elif choice ==5:
+        bank.display_info()
+    elif choice == 5:
         print("Exiting program")
         break
     else:
