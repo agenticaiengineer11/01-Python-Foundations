@@ -20,3 +20,6 @@ display("Noman",23,"Agentic ai")
 def add(a:int,b: int) -> int :
     return a+b
 print(add(34,53))
+def calculate_Salary(basic_Salary: float , bonus : float):
+    return basic_Salary + bonus
+print(calculate_Salary(45000,5000))
