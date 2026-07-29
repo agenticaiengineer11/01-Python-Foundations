@@ -56,3 +56,17 @@ std.register("Noman","ranjhanoman75@gmail.com")
 std.display()
 std.register("Ali",None)
 std.display()
+
+print("===========Use of Union in type hinting==========")
+from typing import Union
+class employee:
+    def __init__(self,employee_id: Union[int,str]):
+        self.employee_id = employee_id
+    def display(self):
+        print("employee id: ",self.employee_id)
+emp = employee(123)
+emp.display()
+emp1 = employee("emp123")
+emp1.display()
+
+        
