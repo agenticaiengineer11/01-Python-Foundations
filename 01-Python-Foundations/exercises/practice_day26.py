@@ -41,3 +41,18 @@ print(Modulus)
 add = a+b
 print(add)
 
+print("======Advanced type hinting==========")
+from typing import Optional
+class student:
+    def register(self,name:str,email:Optional[str]=None):
+        self.name = name
+        self.email = email
+    def display(self):
+        print("Name: ",self.name)
+        print("email: ",self.email)
+std = student()
+
+std.register("Noman","ranjhanoman75@gmail.com")
+std.display()
+std.register("Ali",None)
+std.display()
