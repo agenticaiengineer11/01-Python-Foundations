@@ -26,3 +26,18 @@ print(calculate_Salary(45000,5000))
 
 Students: list[str] = ["Noman","Ahmad","Ali"]
 print(Students)
+
+
+print("====test commit======")
+print("Noman is an agentic ai engineer")
+a = int(input("Enter a number: "))
+b = int(input("Enter second number: "))
+divide = a/b
+print(divide)
+subtract = a-b
+print(subtract)
+Modulus= a%b
+print(Modulus)
+add = a+b
+print(add)
+
