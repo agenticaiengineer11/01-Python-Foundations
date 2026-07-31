@@ -30,37 +30,70 @@ display(student_info)
 print("============Employee mini project===================")
 Employee : TypeAlias = dict[str,str | int | float]
 Employeelist = list[Employee]
+employees : Employeelist = []
 Employee_info = {
     "name": "Ali",
     "age" : 23,
     "salary": 45000,
     "department": "Marketing"
 }
-def add_employee(employee:Employee,employees:Employeelist) ->None:
-    name = input("Enter employee name: ")
-    age = int(input("Enter the age of employee: "))
-    salary = int(input("Enter the salary of the employee: "))
-    department = input("Enter the department of the employee: ")
-    for employee in Employeelist:
-        if employee["name"] == name:
-            print("Employee already exists")
+def add_employee(employees: EmployeeList) -> None:
 
-        emp = {
-            "name": name,
-            "age": age,
-            "salary": salary,
-            "department": department
-        }
-        Employeelist.append(emp)
-        print("Employee added successfully")
-def display_employee():
-    if not Employeelist:
-        print("Employee not found list is empty!")
+    name = input("Enter employee name: ")
+    age = int(input("Enter age: "))
+    salary = float(input("Enter salary: "))
+    department = input("Enter department: ")
+
+    for employee in employees:
+
+        if employee["name"].lower() == name.lower():
+
+            print("Employee already exists.")
+
+            return
+
+    employee: Employee = {
+        "name": name,
+        "age": age,
+        "salary": salary,
+        "department": department
+    }
+
+    employees.append(employee)
+
+    print("Employee added successfully.")
+def display_employees(employees: EmployeeList) -> None:
+
+    if not employees:
+
+        print("No employees found.")
 
         return
-    for employee in Employeelist:
-        print(f"Name:  {employee['name']}")
-        print(f"Age: {employee['age']}")
-        print(f"Salary: {employee['salary']}")
-        print(f"Department: {employee['department']}")
-        print("Employees are displayed ")
+
+    for employee in employees:
+
+        print("-" * 30)
+        print("Name:", employee["name"])
+        print("Age:", employee["age"])
+        print("Salary:", employee["salary"])
+        print("Department:", employee["department"])
+def search_employee(employees: EmployeeList) -> None:
+
+    name = input("Enter employee name: ")
+
+    for employee in employees:
+
+        if employee["name"].lower() == name.lower():
+
+            print("Employee Found")
+            print(employee)
+
+            return
+
+    print("Employee not found.")
+def calculate_salary(
+    salary: float,
+    bonus: float
+) -> float:
+
+    return salary + bonus
