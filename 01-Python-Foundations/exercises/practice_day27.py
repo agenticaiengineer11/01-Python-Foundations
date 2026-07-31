@@ -53,4 +53,14 @@ def add_employee(employee:Employee,employees:Employeelist) ->None:
         }
         Employeelist.append(emp)
         print("Employee added successfully")
-        
+def display_employee():
+    if not Employeelist:
+        print("Employee not found list is empty!")
+
+        return
+    for employee in Employeelist:
+        print(f"Name:  {employee['name']}")
+        print(f"Age: {employee['age']}")
+        print(f"Salary: {employee['salary']}")
+        print(f"Department: {employee['department']}")
+        print("Employees are displayed ")
