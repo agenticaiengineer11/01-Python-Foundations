@@ -29,3 +29,16 @@ class BankAccount:
 b = BankAccount("12234","Noman ALi",45000)
 
 b.display()
+print("============Hospital management system custom class type hint============")
+class Patient:
+    def __init__(self,name:str,age:int,disease:str):
+        self.name = name
+        self.age = age
+        self.disease = disease
+    def admit_patient(patient:Patient)->None:
+        print("Patient admitted successfully")
+    def display(self)->None:
+        print(f"Name: {self.name}, Age: {self.age}, Disease: {self.disease}")
+p = Patient("Noman",22, "fever")
+Patient.admit_patient(p)
+p.display()
