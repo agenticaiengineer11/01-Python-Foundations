@@ -41,3 +41,13 @@ emp.salary["bonus"]= 5000
 emp1 = Employee("Ali", {"basic": 50000, "bonus": 5000})
 print(emp.salary)
 print(emp1.salary)
+print("========__post_init__ method in data classes=========")
+@dataclass
+class Student:
+    name: str
+    age: int
+    def __post_init__(self):
+        if self.age< 0:
+            raise ValueError("Age cannot be negative")
+std = Student("Noman", 34)
+print(std)
