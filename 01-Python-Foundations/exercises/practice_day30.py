@@ -23,3 +23,16 @@ if status == order_status.PENDING:
 print(Enum.__members__)
 print(status.name)
 print(status.value)
+print("============User role enum classes in python==========")
+class UserRole(Enum):
+    ADMIN = "admin"
+    MANAGER = "manager"
+    EMPLOYEE = "employee"
+    CUSTOMER = "customer"
+def check_access(role:UserRole):
+    if role == UserRole.ADMIN:
+        print("Full access granted")
+    else:
+        print("Limited access granted")
+role  = UserRole.ADMIN
+check_access(role)
