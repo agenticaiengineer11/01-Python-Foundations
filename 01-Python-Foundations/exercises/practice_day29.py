@@ -47,7 +47,8 @@ class Student:
     name: str
     age: int
     def __post_init__(self):
+        self.name = self.name.title()
         if self.age< 0:
             raise ValueError("Age cannot be negative")
-std = Student("Noman", 34)
+std = Student("noman", 34)
 print(std)
