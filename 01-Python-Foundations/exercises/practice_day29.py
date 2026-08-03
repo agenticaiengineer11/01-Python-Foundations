@@ -30,3 +30,14 @@ std2 = Student("Noman", ["Maths", "Physics"])
 std1.subjects.append("Python")
 print(std1.subjects)
 print(std2.subjects)
+print("=============default factory in data classes with dict=======")
+@dataclass
+class Employee:
+    name:str
+    salary: dict = field(default_factory = dict)
+emp = Employee("Noman")
+emp.salary["basic"]= 50000
+emp.salary["bonus"]= 5000
+emp1 = Employee("Ali", {"basic": 50000, "bonus": 5000})
+print(emp.salary)
+print(emp1.salary)
