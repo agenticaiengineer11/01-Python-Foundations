@@ -36,3 +36,19 @@ def check_access(role:UserRole):
         print("Limited access granted")
 role  = UserRole.ADMIN
 check_access(role)
+print("=======Traffic light enum class in python=========")
+class TrafficLight(Enum):
+    RED = "red"
+    YELLOW = "yellow"
+    GREEN = "green"
+def show_action(light : TrafficLight):
+    if light == TrafficLight.RED:
+        print("Stop")
+    elif light == TrafficLight.YELLOW:
+        print("Get ready")
+    elif light == TrafficLight.GREEN:
+        print("Go")
+    else:
+        print("Invalid Light")
+light =  TrafficLight.RED
+show_action(light)
