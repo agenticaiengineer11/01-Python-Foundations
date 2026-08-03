@@ -20,3 +20,13 @@ class User:
     password: str = field(repr =False)
 user = User("Noman","1244")
 print(user)
+print("========Default factory in data classes with list and dict======")
+@dataclass
+class Student:
+    name: str
+    subjects: list = field(default_factory = list)
+std1 = Student("Noman")
+std2 = Student("Noman", ["Maths", "Physics"])
+std1.subjects.append("Python")
+print(std1.subjects)
+print(std2.subjects)
