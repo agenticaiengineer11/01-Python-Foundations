@@ -20,3 +20,6 @@ class OrderStatus(Enum):
 status = order_status.PENDING
 if status == order_status.PENDING:
     print("order is pending")
+print(Enum.__members__)
+print(status.name)
+print(status.value)
