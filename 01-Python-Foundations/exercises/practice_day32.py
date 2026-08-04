@@ -20,3 +20,8 @@ marks  = defaultdict(int)
 marks["Noman"] += 90
 marks["Ali"] +=95
 print(marks)
+
+students = defaultdict(int)
+students["Noman"]+= 1
+students["Ali"] += 0
+print(students)
