@@ -25,3 +25,11 @@ students = defaultdict(int)
 students["Noman"]+= 1
 students["Ali"] += 0
 print(students)
+print("appending students by department using defaultdict")
+from collections import defaultdict
+departments = defaultdict(list)
+departments["IT"].append("Noman")
+departments["IT"].append("Ali")
+departments["HR"].append("Sara")
+departments["HR"].append("Mukurram")
+print(departments)
