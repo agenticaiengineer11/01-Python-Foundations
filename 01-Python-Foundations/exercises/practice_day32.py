@@ -13,3 +13,10 @@ words = [
 ]
 count  = Counter(words)
 print(count)
+print(count["apple"])
+print("============defaultdict in python ==========")
+from collections import defaultdict
+marks  = defaultdict(int)
+marks["Noman"] += 90
+marks["Ali"] +=95
+print(marks)
