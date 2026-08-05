@@ -12,3 +12,15 @@ name.pop()
 print(name)
 name.appendleft("muku")
 print(name)
+
+print("============Ordereddict================")
+from collections import OrderedDict
+student = OrderedDict()
+student["Name"]= "Noman"
+student["Age"]= 22
+student["Course"]= "Agentic ai"
+print(student)
+student.move_to_end("Name")
+print(student)
+student.move_to_end("Name", last=False)
+print(student)
