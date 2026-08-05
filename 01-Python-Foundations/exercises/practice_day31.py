@@ -1,4 +1,4 @@
-from typing import NamedTuple
+from typing import NamedTuple   #it is immutable like tuple but we can access the values by name instead of index
 
 class Employee(NamedTuple):
     name: str
