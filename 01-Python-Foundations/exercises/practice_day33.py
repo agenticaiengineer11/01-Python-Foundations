@@ -14,7 +14,7 @@ print(numbers2)
 numbers.append(40)
 print(numbers)
 print(numbers2)
-import copy
+import copy      #shallow copy
 student = [
     "Noman",
     [2,3,5,5]
@@ -23,3 +23,15 @@ student1= copy.copy(student)
 student1[1].append(100)
 print(student)
 print(student1)
+
+print("=============Deepcopy=============")
+import copy
+student = [
+    "Noman",
+    [2,3,5,5]
+]
+student2 = copy.deepcopy(student)
+student2[1].append(100)
+student[1].append("Ali")
+print(student)
+print(student2)
