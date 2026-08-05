@@ -24,3 +24,16 @@ student.move_to_end("Name")
 print(student)
 student.move_to_end("Name", last=False)
 print(student)
+
+print("==================Chain Map===================")
+from collections import ChainMap # used to combine multiple dictionaries in one dict
+student= {
+    "name":"Noman",
+    "age":22,
+}
+marks = {
+    "python": 95,
+    "ai": 85
+}
+combined = ChainMap(student,marks)
+print(combined)
