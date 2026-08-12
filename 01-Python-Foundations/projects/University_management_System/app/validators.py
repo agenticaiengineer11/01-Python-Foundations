@@ -9,24 +9,43 @@ def validate_name(name:str)-> bool:
         return False
     
     return True
-print(validate_name("Noman"))
-print(validate_name("ali123"))
-print(validate_name("Mukurram Aziz"))
-print(validate_name("1234"))
 
 
 
 def validate_age(age:int)-> bool:
-    pass 
+    if isinstance(age,bool):
+        return False
+    if not isinstance(age,int):
+        return False
+    if age < 16 or age > 100:
+        return False
+
+    return True
+
 
 
 
 
 def validate_cgpa(cgpa:float)-> bool:
-    pass
+    if isinstance(cgpa,bool):
+        return False
+    if not isinstance(cgpa, (int,float)):
+        return False
+    if cgpa < 0.0 or cgpa > 4.0:
+        return False
+
+    return True
+
 
 
 
 
 def validate_student_id(student_id:int)-> bool:
-    pass
+    if isinstance(student_id, bool):
+        return False
+    if not isinstance(student_id, int):
+        return False
+    if student_id <= 0:
+        return False
+
+    return True
